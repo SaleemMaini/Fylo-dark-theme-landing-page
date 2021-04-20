@@ -1,17 +1,16 @@
 /* Start Varibales */
 :root {
-
+    --section-pading:60px;
 }
 /* End Varibales */
 /* Start components */
 .cta-btn {
-    width: 260px;
+    display: block;
+    width: 280px;
     padding: 15px;
-    margin: 20px auto;
+    margin: auto;
     background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
     border-radius: 30px;
-}
-.cta-btn a {
     font-family: 'Raleway', sans-serif;
     color: white;
     text-decoration: none;
@@ -56,10 +55,15 @@ body {
         width: 1170px;
     }
 }
+h3{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
 /* End Global Rules */
 /* Start Header */
 .header {
     padding: 15px;
+    background-color: #1c2230;
 }
 .header .container {
     display: flex;
@@ -75,8 +79,8 @@ body {
 }
 .header .links ul li {
     display: inline-block;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin-right: 8px;
+    margin-left: 8px;
 }
 .header .links ul li a{
     text-decoration: none;
@@ -89,20 +93,173 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
+    background-color: #1c2230;
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom; 
+    padding-top: var(--section-pading);
+    padding-bottom: var(--section-pading);
 }
+
+@media (max-width:768px) {
 .intro .intro-image img{
-    width: 40%;
+    width: 100%;
+}
 }
 .intro .text {
-    width: 350px;
     margin: auto;
 }
+
+/* Medium Screens */
+@media (min-width:992px) {
+    .intro .text {
+        width: 50%;
+    }
+}
 .intro .text h3 {
-    font-size: 19px;
+    font-size: 35px;
     font-family: 'Raleway', sans-serif;
 }
 .intro .text p {
     line-height: 1.6;
+    font-size: 22px;
+    margin-top: -10px;
+}
+/* End intro */
+/* Start Features  */
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.features .container {
+    display: grid;
+    grid-gap: 20px;
+}
+@media (min-width:768px) {
+    .features .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.features .feat {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.features .feat p {
+    margin: auto;
+    line-height: 1.6;
+    font-size: 16px;
+    width: 80%;
+}
+/* End Features */
+/* Start about */
+.about {
+    padding-top: var(--section-pading);
+    padding-bottom: var(--section-pading);
+}
+.about .container {
+    display: flex;
+}
+@media (max-width:991px) {
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.about .container .image img{
+    max-width: 450px;
+}
+@media (max-width:768px) {
+.about .container .image img { 
+    max-width: 250px;
+}
+}
+.about .content {
+    padding: 40px;
+    color: white;
+}
+.about .content h3 { 
+    font-size: 30px;
 }
 
-/* End intro */
+@media (min-width:991px) { 
+    .about .content h3 { 
+    width: 75%;
+    }
+}
+
+@media (min-width:1200px) { 
+    .about .content h3 { 
+    width: 50%;
+    }
+}
+.about .content p { 
+    line-height: 1.6;
+    font-size: 14px;
+}
+.about .content .link {
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    padding-top:4px;
+    padding-bottom:4px;
+    margin: auto;
+}
+.about .content .link a {
+    color: hsl(176, 68%, 64%);
+    text-decoration: none;
+    margin-right: 8px;
+}
+/* End about */
+/* Start team section */
+.team {
+    padding-top: var(--section-pading);
+    padding-bottom: var(--section-pading);
+}
+.team .container .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 30px;
+    position: relative;
+}
+.team .container .testimonials::before {
+    position: absolute;
+    content: url(../images/bg-quotes.png);
+    top: -35px;
+    left: -10px;
+    z-index: -1;
+}
+.team .container .testimonials .te {
+    background-color:  hsl(219, 30%, 18%);
+    padding: 20px;
+    color: white;
+    border-radius: 6px;
+ }
+ 
+.team .container .testimonials .te p { 
+    line-height: 1.6;
+}
+
+.team .container .testimonials .te img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+ }
+ .team .container .testimonials .te .person {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+ }
+ .team .container .testimonials .te .person .person-name {
+     margin-left: 10px;
+     font-size: 8px;
+ } 
+ .team .container .testimonials .te .person .person-name span{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 5px;
+ }
+/* End team section */
