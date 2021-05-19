@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/flyo-dark-theme-landing-page-UJ1QO84OF)
-- Live Site URL: [Add live site URL here](https://saleemmaini.github.io/Fylo-dark-theme-landing-page)
+- Live Site URL: (https://saleemmaini.github.io/Fylo-dark-theme-landing-page)
+- Solution URL: (https://www.frontendmentor.io/solutions/flyo-dark-theme-landing-page-UJ1QO84OF)
 
 ## My process
 
